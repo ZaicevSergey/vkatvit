@@ -1,6 +1,6 @@
 #!/bin/bash
-FILE=D:\\curse\\HW1\\src\\main\\java\\Main.java
-FILE_CLASS=D:\\curse\\HW1\\src\\main\\java\\Main.class
+FILE=D:\\vkatvit\\HW1\\src\\main\\java\\hw1\\Main.java
+FILE_CLASS=D:\\vkatvit\\HW1\\src\\main\\java\\hw1\\Main.class
 myFileSizeCheck=$(stat -c %s "$FILE")
 
 
@@ -15,5 +15,5 @@ if [[ -f "$FILE" ]] && [[ "$myFileSizeCheck" -gt 100 ]]; then
     echo "$FILE $(date +"%d-%m-%Y") $(date +"%T") <---- The file is not compiled" >>error.log
   fi
 else
-  echo "$FILE <---- File not found or its size does not match the condition. Compilation is not possible" >>error.log
+  echo "$FILE $(date +"%d-%m-%Y") $(date +"%T") <---- File not found or its size does not match the condition. Compilation is not possible" >>error.log
 fi
